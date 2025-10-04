@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEU Wallet</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #4e54c8, #8f94fb);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+
+    .form-control,
+    textarea {
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      background-color: #6a11cb;
+      background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+      border: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(37, 117, 252, 0.4);
+    }
+
+    h1 {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      border: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    #notes .card {
+      margin-bottom: 20px;
+    }
+
+    #notes .card-body {
+      position: relative;
+    }
+
+    .note-icon {
+      font-size: 1.2rem;
+      color: #6a11cb;
+      margin-right: 10px;
+    }
+
+    #searchTxt {
+      border-radius: 20px;
+    }
+
+    .btn-outline-success {
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#"><i class="fas fa-wallet"></i> GEU Wallet</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><i class="fas fa-sticky-note"></i> Notes Manager</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="password.html"><i class="fas fa-key"></i> Password Manager</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search notes..."
+          aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1 class="text-center mb-4">📝 Note Manager</h1>
+
+    <div class="card p-4 mb-4">
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-plus-circle note-icon"></i>Add a New Note</h5>
+        <div class="form-group">
+          <textarea class="form-control" id="addTxt" rows="3" placeholder="Type your note here..."></textarea>
+        </div>
+        <button class="btn btn-primary" id="addBtn"><i class="fas fa-plus"></i> Add Note</button>
+      </div>
+    </div>
+
+    <h1 class="mb-4">📂 Your Notes</h1>
+    <div id="notes" class="row container-fluid">
+      <!-- Notes will be dynamically injected here -->
+    </div>
+  </div>
+
+  <!-- Bootstrap and Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="javaScript/app.js"></script>
+
+</body>
+
+</html>
